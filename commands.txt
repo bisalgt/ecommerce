@@ -1,0 +1,30 @@
+# creating python virtual environment
+python3 -m venv venv-name
+
+# pip list
+$ pip freeze > requirements.txt
+$ pip install -r requirements.txt
+
+# after upgrading to python as per medium article, i was unable to install pip
+$python3 - m venv --without-pip myvenv-name
+
+after upgrading couldnot get work with the upata. apt_pkg was missing. I removed python3-apt and reinstalled sudo apt-get remove/install python3-apt
+
+
+while apt-update error occurs then remove the line that causing error from source list.
+
+####################################################################################################################################################
+
+python -m venv project_venv
+
+pip install django==3.0
+
+sudo apt-get install python3-dev default-libmysqlclient-dev # see more on mysqlclient pypi
+
+pip install mysqlclient==1.4.6
+
+
+# sql to show colums --SHOW COLUMNS FROM database_Name.table_name;
+
+
+pip install djangorestframework==3.11.0

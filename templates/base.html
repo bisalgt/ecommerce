@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django</title>
+</head>
+<body>
+    {{data}}
+
+    {% for catagory in categories %}
+        <h1>{{catagory.title}}</h1>
+    {% endfor %}
+
+
+    {% for sub_catagory in sub_categories %}
+        <h1>{{sub_catagory.title}}</h1>
+    {% endfor %}
+
+
+
+    {% for product in products %}
+        <h1>{{product.title}}</h1>
+    {% endfor %}
+
+
+</body>
+</html>
