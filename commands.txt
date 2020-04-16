@@ -25,6 +25,6 @@ pip install mysqlclient==1.4.6
 
 
 # sql to show colums --SHOW COLUMNS FROM database_Name.table_name;
-
+# git checkout . /// to get back the deleted files if no commit is made
 
 pip install djangorestframework==3.11.0
