@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block detail_product %}
+    <div class="col" style="padding:10px; border: 1px solid black; background-color: #a3f3b5;">
+        <h3><a href="{{product.get_absolute_url}}">{{product.title}}</a></h3>
+        <p>{{product.price}}</p>
+        <p>{{product.sub_category}}</p>
+        <p>{{product.sub_category.category}}</p>
+        <img class='img-fluid' style="padding: 21px;" src={{product.image.url}}>
+    </div>
+{% endblock detail_product %}

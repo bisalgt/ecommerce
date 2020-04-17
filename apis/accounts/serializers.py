@@ -20,6 +20,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
                     address = validate_data.get('address', None),
                     phone_number = validate_data.get('phone_number', None),
                 )
+
             user.set_password(validate_data.get('password'))
             print(validate_data.get('password'))
             print(validate_data)
