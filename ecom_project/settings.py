@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.urls import reverse_lazy
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 
     # third_party_apps
     'rest_framework',
+    'crispy_forms',
 
 ]
 
@@ -142,3 +145,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 AUTH_USER_MODEL = 'accounts.User'
+
+LOGIN_REDIRECT_URL = reverse_lazy('success')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

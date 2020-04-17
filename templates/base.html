@@ -1,21 +1,15 @@
 {% load static %}
-
+{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Django</title>
-</head>
-<body>
-
-{% load static %}
-<img src={% static 'image.jpg' %}>
-    {% for product in products %}
-        <h1>{{product.title}}</h1>
-        {{product.sub_category.category}}
-        <img src={{product.image.url}}>
-    {% endfor %}
-
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    {% block home_text %}
+    {% endblock home_text %}
+|</body>
 </html>
