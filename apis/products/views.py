@@ -24,6 +24,56 @@ def home(request):
     return Response(serializer.data)
 
 
+
+
+@api_view(['GET'])
+@renderer_classes([TemplateHTMLRenderer,])
+def delete_product(request, id, slug):
+    product = Product.objects.get(id=id)
+    product.delete()
+    print(product)
+    if request.accepted_renderer.format == 'html':
+        print('show html')
+        return redirect('home')
+
+
+@api_view(['GET'])
+@renderer_classes([JSONRenderer, TemplateHTMLRenderer,])
+def home(request):
+    products = Product.objects.all()
+    print(products)
+    if request.accepted_renderer.format == 'html':
+        print('show html')
+        data = {'products': products}
+        return Response(data, template_name='base.html')
+
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
+
+
+
+@api_view(['GET'])
+@renderer_classes([JSONRenderer, TemplateHTMLRenderer,])
+def home(request):
+    products = Product.objects.all()
+    print(products)
+    if request.accepted_renderer.format == 'html':
+        print('show html')
+        data = {'products': products}
+        return Response(data, template_name='base.html')
+
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
+
+
+
+
+
+
+
+
+
+
 @api_view(['GET', 'POST'])
 @renderer_classes([TemplateHTMLRenderer,JSONRenderer,] )
 def create_products(request):

@@ -11,7 +11,7 @@
     <style type="text/css">
                 .parallax {
           /* The image used */
-          background-image: url("/static/image.jpg");
+          background-image: url("/static/weed.jpg");
 
           /* Set a specific height */
           min-height: 500px;
@@ -81,6 +81,7 @@
                 <p>{{product.sub_category}}</p>
                 <p>{{product.sub_category.category}}</p>
                 <p><a href="{{product.get_absolute_url}}update/">update</a></p>
+                <p><a href="{{product.get_absolute_url}}delete/">delete</a></p>
 
                 <img class='img-fluid' style="padding: 21px;" src={{product.image.url}}>
             </div>
